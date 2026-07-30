@@ -8,6 +8,8 @@ import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Projects from './components/Projects'
+import GitHubContributions from "./components/GitHubContributions";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Education />
       <Certifications />
       <Projects />
+      <GitHubContributions username="CLOUDFREEZE" year="last"/>
       <Contact />
       <Footer />
     </div>
