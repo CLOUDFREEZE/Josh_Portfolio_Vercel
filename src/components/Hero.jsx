@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Hero.css'
+import profileImg from '../assets/profile.jpg' // or use /public/profile.jpg
 
 const BOOT_LINES = [
   { text: 'initializing profile...', delay: 0 },
@@ -27,24 +28,33 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="container hero-grid">
-        <div className="terminal panel" role="img" aria-label="Terminal boot sequence introducing Josh Henrick Catchillar as a QA Analyst and Cloud Engineer">
-          <div className="terminal-bar">
-            <span className="dot red" />
-            <span className="dot yellow" />
-            <span className="dot green" />
-            <span className="terminal-title mono">profile.sh</span>
+        
+        {/* Left column: Profile Image + Terminal */}
+        <div className="hero-left">
+          <div className="hero-image">
+            <img src={profileImg} alt="Josh Henrick D. Catchillar" />
           </div>
-          <div className="terminal-body mono">
-            {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
-              <div key={i} className={`term-line ${line.highlight ? 'ok' : ''}`}>
-                {line.highlight ? <span className="prefix">[ OK ]</span> : <span className="prefix muted">{'>'}</span>}
-                <span>{line.text}</span>
-              </div>
-            ))}
-            {visibleLines < BOOT_LINES.length && <span className="cursor" aria-hidden="true">▌</span>}
+
+          <div className="terminal panel" role="img" aria-label="Terminal boot sequence introducing Josh Henrick Catchillar as a QA Analyst and Cloud Engineer">
+            <div className="terminal-bar">
+              <span className="dot red" />
+              <span className="dot yellow" />
+              <span className="dot green" />
+              <span className="terminal-title mono">profile.sh</span>
+            </div>
+            <div className="terminal-body mono">
+              {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
+                <div key={i} className={`term-line ${line.highlight ? 'ok' : ''}`}>
+                  {line.highlight ? <span className="prefix">[ OK ]</span> : <span className="prefix muted">{'>'}</span>}
+                  <span>{line.text}</span>
+                </div>
+              ))}
+              {visibleLines < BOOT_LINES.length && <span className="cursor" aria-hidden="true">▌</span>}
+            </div>
           </div>
         </div>
 
+        {/* Right column: Text */}
         <div className={`hero-copy ${showContent ? 'in' : ''}`}>
           <span className="status-pill dot">SYSTEM READY</span>
           <h1 className="hero-title">

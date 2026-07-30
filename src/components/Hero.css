@@ -7,8 +7,24 @@
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   align-items: center;
+}
+
+.hero-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #00ff99;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.7);
+  object-fit: cover;
 }
 
 /* --- terminal --- */
