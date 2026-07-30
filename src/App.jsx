@@ -7,6 +7,7 @@ import Education from './components/Education'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Projects from './components/Projects'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Experience />
       <Education />
       <Certifications />
+      <Projects />
       <Contact />
       <Footer />
     </div>

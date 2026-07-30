@@ -6,6 +6,7 @@ const LINKS = [
   { href: '#experience', label: 'experience' },
   { href: '#education', label: 'education' },
   { href: '#contact', label: 'contact' },
+  { href: '#projects', label: 'projects' },
 ]
 
 export default function Navbar() {
