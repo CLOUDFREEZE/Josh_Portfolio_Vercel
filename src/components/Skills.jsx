@@ -1,0 +1,52 @@
+import './Skills.css'
+
+const SUITES = [
+  {
+    name: 'core.test',
+    items: ['Communication Skills', 'Collaboration', 'Critical Thinking', 'Leadership', 'Problem-Solving'],
+  },
+  {
+    name: 'systems.test',
+    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing'],
+  },
+  {
+    name: 'tools.test',
+    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#', 'Canva Designing'],
+  },
+]
+
+export default function Skills() {
+  const total = SUITES.reduce((sum, s) => sum + s.items.length, 0)
+
+  return (
+    <section id="skills">
+      <div className="container">
+        <span className="cmd-label">npm run test:skills</span>
+        <h2 className="section-title">Skills</h2>
+
+        <div className="suite-grid">
+          {SUITES.map((suite) => (
+            <div key={suite.name} className="panel suite-card">
+              <div className="suite-header mono">
+                <span>{suite.name}</span>
+                <span className="status-pill dot">PASS</span>
+              </div>
+              <ul className="suite-list">
+                {suite.items.map((item) => (
+                  <li key={item}>
+                    <span className="check mono">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="mono muted suite-summary">
+          {total} checks · {total} passed · 0 failed
+        </p>
+      </div>
+    </section>
+  )
+}

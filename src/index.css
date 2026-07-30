@@ -1,0 +1,152 @@
+/* ============================================
+   DESIGN TOKENS
+   Concept: systems-diagnostic / test-suite.
+   Josh is a QA + Cloud IT grad — the site reads
+   like a status console: things get checked,
+   verified, and marked PASS.
+   ============================================ */
+:root {
+  --bg: #0a0f1a;
+  --surface: #111a2b;
+  --surface-alt: #16223a;
+  --border: #24314b;
+  --text: #e8ecf6;
+  --muted: #8b97b3;
+  --accent: #55e6c1;       /* pass / verified */
+  --accent-dim: #2f7d6b;
+  --warn: #f2b872;         /* in-progress / pending */
+  --accent-rgb: 85, 230, 193;
+
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --max-width: 920px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(85, 230, 193, 0.07), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(242, 184, 114, 0.05), transparent 40%);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type { border-bottom: none; }
+
+/* --- command-line style section eyebrow --- */
+.cmd-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+.cmd-label::before {
+  content: '$';
+  color: var(--muted);
+}
+
+.section-title {
+  font-size: clamp(26px, 3.4vw, 34px);
+  font-weight: 600;
+  margin-bottom: 36px;
+  color: var(--text);
+}
+
+/* --- status pill --- */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(var(--accent-rgb), 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+}
+
+.status-pill.dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.mono { font-family: var(--font-mono); }
+
+.muted { color: var(--muted); }
+
+button, .btn {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.3);
+}
+
+/* focus visibility for keyboard nav */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  section { padding: 64px 0; }
+}
