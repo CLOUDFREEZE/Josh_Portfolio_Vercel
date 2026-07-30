@@ -11,7 +11,7 @@ const SUITES = [
   },
   {
     name: 'tools.test',
-    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#', 'Canva Designing'],
+    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Canva Designing'],
   },
 ]
 
@@ -42,10 +42,6 @@ export default function Skills() {
             </div>
           ))}
         </div>
-
-        <p className="mono muted suite-summary">
-          {total} checks · {total} passed · 0 failed
-        </p>
       </div>
     </section>
   )

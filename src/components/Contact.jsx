@@ -22,8 +22,8 @@ export default function Contact() {
               <span>0969 321 8260</span>
             </a>
             <div className="contact-item">
-              <span className="mono muted">location</span>
-              <span>Quezon City, Philippines</span>
+              <span className="mono muted">Github</span>
+              <span>CLOUDFREEZE</span>
             </div>
           </div>
         </div>

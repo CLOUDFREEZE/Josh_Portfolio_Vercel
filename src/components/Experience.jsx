@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="panel log-entry">
           <div className="log-meta mono">
             <span className="status-pill dot">INTERNSHIP</span>
-            <span className="muted">2022 – 2026</span>
+            <span className="muted">December 2025 – March 2026</span>
           </div>
           <h3 className="log-role">Quality Assurance / Accreditation Department</h3>
           <p className="log-org muted">Bestlink College of the Philippines</p>
