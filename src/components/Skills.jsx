@@ -3,11 +3,11 @@ import './Skills.css'
 const SUITES = [
   {
     name: 'systems.test',
-    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing', 'Graphic Designing', 'Basic Video Editing', 'Canva Designing'],
+    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing', 'Graphic Designing', 'Basic Video Editing', 'Canva Designing', 'Basic Networking', 'Basic Cloud Computing', 'Information Security', 'Quality Assurance Principles', 'Basic Troubleshooting'],
   },
   {
     name: 'tools.test',
-    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Web Development — HTML, CSS, JavaScript, Bootstrap, TailwindCSS', 'Basic Networking', 'Basic Linux', 'Basic Cloud Computing', 'BCybersecurity'],
+    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Web Development — HTML5, CSS3, JavaScript, Bootstrap, TailwindCSS'],
   },
 ]
 

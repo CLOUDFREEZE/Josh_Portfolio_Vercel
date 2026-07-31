@@ -5,14 +5,14 @@ const PROJECTS = [
     branch: "main",
     name: "Capstone Project",
     title:
-      "Hospital Management System I: Human Resource 2 (Talent Development & Career Pathing) with (BART-LARGE-MNLI) Analytics",
+      "Hospital Management System I: Human Resource 2 (Talent Development & Career Pathing) with (BART-LARGE-MNLI) AI Analytics",
     description:
       "A full-featured hospital management web application with Talent Development & Career Pathing features.",
     techstack: [
       "PHP",
       "MySQL",
       "Tailwind CSS",
-      "Indefinite",
+      "Indevfinite",
       "Postman",
     ],
     link: "https://hr2.health-ease-hospital.com/login-register.php",
