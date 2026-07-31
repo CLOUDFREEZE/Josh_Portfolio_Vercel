@@ -12,13 +12,14 @@ const RELEASES = [
   {
     version: 'v3.0',
     years: '2020 – 2022',
-    title: 'General Academic Strand (GAS)',
+    title: 'Senior High School',
+    note: 'General Academic Strand (GAS)',
     org: 'Metro Manila College',
   },
   {
     version: 'v2.0',
     years: '2016 – 2020',
-    title: 'Junior & Senior High School',
+    title: 'Junior High School',
     org: 'Novaliches High School',
   },
   {

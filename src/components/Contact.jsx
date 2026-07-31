@@ -21,10 +21,14 @@ export default function Contact() {
               <span className="mono muted">phone</span>
               <span>0969 321 8260</span>
             </a>
-            <div className="contact-item">
-              <span className="mono muted">Github</span>
+            <a href="https://github.com/CLOUDFREEZE" className="contact-item" target="_blank" rel="noopener noreferrer">
+              <span className="mono muted">github</span>
               <span>CLOUDFREEZE</span>
-            </div>
+            </a>
+            <a href="https://www.linkedin.com/in/josh-henrick-catchillar-4701122aa/" className="contact-item" target="_blank" rel="noopener noreferrer">
+              <span className="mono muted">linkedin</span>
+              <span>Josh Henrick Catchillar</span>
+            </a>
           </div>
         </div>
       </div>
