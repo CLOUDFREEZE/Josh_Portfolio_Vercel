@@ -2,16 +2,12 @@ import './Skills.css'
 
 const SUITES = [
   {
-    name: 'core.test',
-    items: ['Communication Skills', 'Collaboration', 'Critical Thinking', 'Leadership', 'Problem-Solving'],
-  },
-  {
     name: 'systems.test',
-    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing'],
+    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing', 'Graphic Designing', 'Basic Video Editing', 'Canva Designing'],
   },
   {
     name: 'tools.test',
-    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Canva Designing'],
+    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Web Development — HTML, CSS, JavaScript, Bootstrap, TailwindCSS', 'Basic Networking', 'Basic Linux', 'Basic Cloud Computing', 'BCybersecurity'],
   },
 ]
 
