@@ -101,7 +101,7 @@ export default function GitHubContributions({ username = "octocat", year = "last
   });
 
   return (
-    <section className="github-contrib" id="github-contributions">
+    <section className="github-contrib" id="GitHubContributions">
       <div className="github-contrib__header">
         <h2 className="github-contrib__title">GitHub Contributions</h2>
         <span className="github-contrib__total">{total} contributions</span>

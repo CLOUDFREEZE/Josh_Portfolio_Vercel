@@ -68,6 +68,7 @@ export default function Hero() {
             <a href="#contact" className="btn btn-primary">Get in touch</a>
             <a href="#experience" className="btn btn-ghost">View background</a>
             <a href="#projects" className="btn btn-ghost">View projects</a>
+            <a href="#GitHubContributions" className="btn btn-primary">GitHub contributions</a>
           </div>
         </div>
       </div>

@@ -3,11 +3,11 @@ import './Skills.css'
 const SUITES = [
   {
     name: 'systems.test',
-    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing', 'Graphic Designing', 'Basic Video Editing', 'Canva Designing', 'Basic Networking', 'Basic Cloud Computing', 'Information Security', 'Quality Assurance Principles', 'Basic Troubleshooting'],
+    items: ['Database Management', 'Project Management', 'System Analysis', 'Technical Writing', 'Graphic Designing', 'Basic Video Editing', 'Canva Designing', 'Basic Networking', 'Basic Cloud Computing', 'Quality Assurance Best Practices', 'Basic Troubleshooting', 'Information Security — Cybersecurity Principles and Best Practices'],
   },
   {
     name: 'tools.test',
-    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Web Development — HTML5, CSS3, JavaScript, Bootstrap, TailwindCSS'],
+    items: ['MS Office (Word, PowerPoint, Excel, Outlook)', 'Basic Programming — PHP, C++, C, Python, Java, C#, ReactJS, and ExpressJS ', 'Web Development — HTML5, CSS3, JavaScript, Bootstrap, TailwindCSS', 'Mobile App Development — Flutter, Dart, and React Native', 'Database Management — MySQL, MongoDB', 'Version Control — Git and Github', 'Quality Assurance — Manual Testing and Automation Testing (Selenium)'],
   },
 ]
 
