@@ -18,6 +18,25 @@ const PROJECTS = [
     link: "https://hr2.health-ease-hospital.com/login-register.php",
     linkLabel: "View Project",
   },
+  {
+branch: "main",
+    name: "Weather Website",
+    title:
+      "An Web Based Weather Application that provides real-time weather information for any location.",
+    description:
+      "A web application that allows users to search for weather information by city name or zip code, and displays the current weather conditions, temperature, humidity, wind speed, and a 5-day forecast.",
+    techstack: [
+      "React",
+      "Tailwind",
+      "OpenWeatherMap API",
+      "Axios",
+    ],
+    link: "https://weather-app-josh-85th.vercel.app/",
+    linkLabel: "View Project",
+
+
+
+  }
 ];
 
 export default function Projects() {
