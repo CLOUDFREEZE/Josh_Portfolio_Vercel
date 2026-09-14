@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -12,6 +13,16 @@ import GitHubContributions from "./components/GitHubContributions";
 
 
 function App() {
+  useEffect(() => {
+fetch("http://localhost:5000/track", {      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        page: window.location.pathname,
+        referrer: document.referrer,
+      }),
+    }).catch(() => {}); // fail silently if backend is down
+  }, []);
+
   return (
     <div id="top">
       <Navbar />
