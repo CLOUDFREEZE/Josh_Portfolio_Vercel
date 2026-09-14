@@ -54,6 +54,52 @@ def track_visit():
     return jsonify({"status": "ok"}), 200
 
 
+@app.route("/stats", methods=["GET"])
+def stats():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("SELECT * FROM visits ORDER BY timestamp").fetchall()
+    conn.close()
+
+    total = len(rows)
+    unique_ips = len({r["ip"] for r in rows})
+
+    by_day = {}
+    by_page = {}
+    for r in rows:
+        day = r["timestamp"][:10]
+        by_day[day] = by_day.get(day, 0) + 1
+        by_page[r["page"]] = by_page.get(r["page"], 0) + 1
+
+    day_rows = "".join(f"<tr><td>{d}</td><td>{c}</td></tr>" for d, c in sorted(by_day.items()))
+    page_rows = "".join(f"<tr><td>{p}</td><td>{c}</td></tr>" for p, c in sorted(by_page.items(), key=lambda x: -x[1]))
+
+    html = f"""
+    <html>
+    <head>
+        <title>Portfolio Visit Stats</title>
+        <style>
+            body {{ font-family: sans-serif; max-width: 600px; margin: 40px auto; }}
+            table {{ border-collapse: collapse; width: 100%; margin-bottom: 30px; }}
+            td, th {{ border: 1px solid #ccc; padding: 6px 10px; text-align: left; }}
+        </style>
+    </head>
+    <body>
+        <h1>Portfolio Visit Stats</h1>
+        <p><strong>Total visits:</strong> {total}</p>
+        <p><strong>Unique visitors:</strong> {unique_ips}</p>
+
+        <h2>Visits by day</h2>
+        <table><tr><th>Day</th><th>Visits</th></tr>{day_rows}</table>
+
+        <h2>Top pages</h2>
+        <table><tr><th>Page</th><th>Visits</th></tr>{page_rows}</table>
+    </body>
+    </html>
+    """
+    return html
+
+
 if __name__ == "__main__":
     import os
     init_db()
