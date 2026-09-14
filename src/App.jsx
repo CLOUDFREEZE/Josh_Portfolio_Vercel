@@ -14,7 +14,7 @@ import GitHubContributions from "./components/GitHubContributions";
 
 function App() {
   useEffect(() => {
-fetch("http://localhost:5000/track", {      method: "POST",
+fetch("https://josh-portfolio-vercel.onrender.com/track",{      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         page: window.location.pathname,
